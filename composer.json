@@ -1,0 +1,35 @@
+{
+  "name": "sjdaws/loyaltycorp-test",
+  "description": "Test library for Loyalty Corp",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Scott Dawson",
+      "email": "scott@sjdaws.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "sjdaws/loyaltycorp-mailchimp": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/php-code-coverage": "^4.0",
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sjdaws\\LoyaltyCorpTest\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sjdaws\\Tests\\LoyaltyCorpTest\\": "tests/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:sjdaws/loyaltycorp-mailchimp.git"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+
+// Body
+$body-bgcolour: #f5f5f5;
+$body-colour: #444;
+
+$box-bgcolour: lighten($body-bgcolour, 15%);
+$box-colour: lighten($body-colour, 15%);
+$box-hover-bgcolour: lighten($body-colour, 15%);
+$box-hover-colour: lighten($body-bgcolour, 15%);
+
+$sidebar-bgcolour: lighten($body-colour, 15%);;
+$sidebar-colour: lighten($body-bgcolour, 15%);
+$content-bgcolour: lighten($body-bgcolour, 15%);
+$content-colour: lighten($body-colour, 15%);
