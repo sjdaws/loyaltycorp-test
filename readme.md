@@ -2,7 +2,7 @@
 
 ## Installation into a Laravel instance
 
-> **Note:** This package requires at least PHP 7.1 
+> **Note:** This package requires at least PHP 7.1
 
 #### Clone a new Laravel instance
 
@@ -28,7 +28,7 @@ Since the repositories aren't on packagist you'll need to specify where they are
 ```
 
 #### Add both packages to the require section of composer.json
- 
+
 You will also need felixkiss/uniquewith-validator to validate unique emails within a list
 
 ```
@@ -41,13 +41,13 @@ You will also need felixkiss/uniquewith-validator to validate unique emails with
     },
 ```
 
-### Run composer update to install all packages
+#### Run composer update to install all packages
 
 ```
 [user@desktop laravel]$ composer update
 ```
 
-### Add TestServiceProvider to config/app.php
+#### Add TestServiceProvider to config/app.php
 
 You will also need to add the uniquewith-validator service provider.
 
@@ -55,46 +55,45 @@ You will also need to add the uniquewith-validator service provider.
     'providers' => [
         // A bunch of preinstalled providers
         ...
-        Sjdaws\LoyaltyCorpTest\Providers\TestServiceProvider::class, 
+        Sjdaws\LoyaltyCorpTest\Providers\TestServiceProvider::class,
         Felixkiss\UniqueWithValidator\ServiceProvider::class,
     ],
 ```
 
-### Publish assets:
+#### Publish assets
 
 ```
 [user@desktop laravel]$ php artisan vendor:publish
 ```
 
-### Add Mailchimp API key to .env
+#### Add Mailchimp API key to .env
 
 You will also need to ensure database and queue are set up, so may as well do that at the same time
 
 ```
     MAILCHIMP_APIKEY=somerandomkey-us1
 ```
-    
-### Create jobs and failed jobs migrations for queue runner
+
+#### Create jobs and failed jobs migrations for queue runner
 
 ```
 [user@desktop laravel]$ php artisan queue:table
 [user@desktop laravel]$ php artisan queue:failed-table
 ````
 
-### Run migrations
+#### Run migrations
 
 ```
 [user@desktop laravel]$ php artisan migrate
 ```
-    
-### Start queue listener
+
+#### Start queue listener
 
 ```
 [user@desktop laravel]$ php artisan queue:listen
 ```
 
-    
-### View in browser
+#### View in browser
 
 The package will be available at http://SERVER_NAME/mailchimp
 
